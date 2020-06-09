@@ -32,9 +32,9 @@ df = df.sort_values(by=['date']) # sort data by date
 import datetime as dt
 df['real_date'] = pd.TimedeltaIndex(df['date'], unit='d') + dt.datetime(1900,1,1)
 
-print(df)
+# print(df)
 
-
+# plot time of volume sales
 plt.plot(df.real_date,df.volume)
 
 # Add title and axis names
